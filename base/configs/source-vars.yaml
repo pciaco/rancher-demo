@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: source-vars
 data:
-  MY_NAMESPACE: rancher-demo
-  URL_HOST: demo-rancher.iad-engage.tk
+  MY_NAMESPACE: k8s-demo-iad
+  URL_HOST: demo-k8s.iad-engage.tk

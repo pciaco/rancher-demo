@@ -1,9 +1,13 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: rancher-demo
+  name: k8s-demo
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: cluster-issuer-letsencrypt-prod
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
   rules:
   - host: $(URL_HOST)
@@ -11,5 +15,9 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: rancher-demo
+          serviceName: k8s-demo-iad
           servicePort: 80
+  tls:
+  - hosts:
+    - $(URL_HOST)
+    secretName: k8s-demo-iad-tls-letsencrypt-prod
