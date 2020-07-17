@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: k8s-demo-iad
 spec:
-  replicas: 7
+  replicas: 4
   selector:
     matchLabels:
       app.kubernetes.io/name: k8s-demo-iad
