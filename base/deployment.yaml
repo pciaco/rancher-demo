@@ -10,7 +10,7 @@ spec:
   template:
     spec:
       containers:
-      - image: pciaco/rancher-demo:latest
+      - image: iados/k8s-demo:release-master
         name: k8s-demo-iad
         envFrom:
         - configMapRef:

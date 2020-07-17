@@ -11,9 +11,9 @@ configMapGenerator:
 - name: k8s-demo-iad-config
   env: configs/env.txt
 images:
-- name: pciaco/rancher-demo
-  newName: pciaco/rancher-demo
-  newTag: latest
+- name: iados/k8s-demo
+  newName: iados/k8s-demo
+  newTag: master
 commonLabels:
   app.kubernetes.io/name: k8s-demo-iad
 vars:
