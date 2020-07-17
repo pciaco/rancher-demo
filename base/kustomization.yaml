@@ -13,7 +13,7 @@ configMapGenerator:
 images:
 - name: iados/k8s-demo
   newName: iados/k8s-demo
-  newTag: master
+  newTag: release-master
 commonLabels:
   app.kubernetes.io/name: k8s-demo-iad
 vars:
