@@ -4,4 +4,4 @@ metadata:
   name: source-vars
 data:
   MY_NAMESPACE: k8s-demo-iad
-  URL_HOST: demo-k8s.iad2.cloud
+  URL_HOST: k8s-demo.iad2.cloud
